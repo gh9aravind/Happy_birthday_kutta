@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +18,7 @@
     integrity="sha512-DTOQO9RWCH3ppGqcEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
-  />
+  >
 
   <script
     src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -25,7 +26,9 @@
     crossorigin="anonymous">
   </script>
 
+
   <!-- ❤️ Floating Heart Cursor Script -->
+
   <script type="text/javascript">
 
     var colours = [
@@ -57,6 +60,7 @@
 
     var kiss = false;
 
+
     if (typeof('addRVLoadEvent') != 'function') {
 
       function addRVLoadEvent(funky) {
@@ -83,7 +87,9 @@
 
     }
 
+
     addRVLoadEvent(mwah);
+
 
     function mwah() {
 
@@ -108,7 +114,9 @@
           heart.style.opacity = 0.75;
 
           heart.appendChild(
-            document.createTextNode(String.fromCharCode(9829))
+            document.createTextNode(
+              String.fromCharCode(9829)
+            )
           );
 
           document.body.appendChild(heart);
@@ -126,11 +134,15 @@
 
     }
 
+
     function herzle() {
 
       var c;
 
-      if (Math.abs(x - ox) > 1 || Math.abs(y - oy) > 1) {
+      if (
+        Math.abs(x - ox) > 1 ||
+        Math.abs(y - oy) > 1
+      ) {
 
         ox = x;
         oy = y;
@@ -152,10 +164,10 @@
               minisize + "px";
 
             herz[c].style.fontWeight =
-              'normal';
+              "normal";
 
             herz[c].style.visibility =
-              'visible';
+              "visible";
 
             herzs[c] = minisize;
 
@@ -166,6 +178,7 @@
         }
 
       }
+
 
       for (c = 0; c < hearts; c++) {
 
@@ -181,13 +194,16 @@
 
     }
 
+
     document.onmousedown = pucker;
+
 
     document.onmouseup = function() {
 
       clearTimeout(kiss);
 
     };
+
 
     function pucker() {
 
@@ -198,11 +214,15 @@
 
     }
 
+
     function blow_me_a_kiss(i) {
 
-      herzy[i] -= herzs[i] / minisize + i % 2;
+      herzy[i] -=
+        herzs[i] / minisize + i % 2;
 
-      herzx[i] += (i % 5 - 2) / 5;
+      herzx[i] +=
+        (i % 5 - 2) / 5;
+
 
       if (
         herzy[i] < sdown - herzs[i] ||
@@ -216,6 +236,7 @@
 
       }
 
+
       else if (
         herzs[i] > minisize + 2 &&
         Math.random() < .5 / hearts
@@ -224,6 +245,7 @@
         break_my_heart(i);
 
       }
+
 
       else {
 
@@ -247,13 +269,14 @@
 
     }
 
+
     function break_my_heart(i) {
 
       herz[i].firstChild.nodeValue =
         String.fromCharCode(9676);
 
       herz[i].style.fontWeight =
-        'bold';
+        "bold";
 
       herzy[i] = false;
 
@@ -264,7 +287,9 @@
 
     }
 
+
     document.onmousemove = mouse;
+
 
     function mouse(e) {
 
@@ -273,9 +298,7 @@
         y = e.pageY;
         x = e.pageX;
 
-      }
-
-      else {
+      } else {
 
         set_scroll();
 
@@ -286,7 +309,9 @@
 
     }
 
+
     window.onresize = set_width;
+
 
     function set_width() {
 
@@ -305,7 +330,9 @@
 
     }
 
+
     window.onscroll = set_scroll;
+
 
     function set_scroll() {
 
@@ -322,6 +349,7 @@
         0;
 
     }
+
 
     function createDiv(height, width) {
 
@@ -351,17 +379,25 @@
 
 </head>
 
+
 <body>
 
+
   <!-- 🎵 Birthday Song -->
+
   <audio
     id="birthdaySong"
     src="./Kannappi.wav"
-    preload="auto">
+    preload="auto"
+    loop>
   </audio>
 
 
+
   <div id="wrapper">
+
+
+    <!-- 🎉 Birthday Flags -->
 
     <div class="flag__birthday">
 
@@ -369,22 +405,30 @@
         src="./images/1.png"
         alt=""
         width="350"
-        class="flag__left">
+        class="flag__left"
+      >
 
       <img
         src="./images/1.png"
         alt=""
         width="350"
-        class="flag__right">
+        class="flag__right"
+      >
 
     </div>
 
 
+
     <div class="content">
+
+
+      <!-- LEFT SIDE -->
 
       <div class="left">
 
+
         <div class="title">
+
 
           <h1 class="happy">
 
@@ -416,11 +460,14 @@
             <img
               src="./images/hat.png"
               alt=""
-              width="130">
+              width="130"
+            >
 
           </div>
 
+
         </div>
+
 
 
         <div class="date__of__birth">
@@ -428,6 +475,7 @@
           <span></span>
 
         </div>
+
 
 
         <div class="btn">
@@ -442,19 +490,25 @@
 
         </div>
 
+
       </div>
 
 
+
+      <!-- RIGHT SIDE -->
+
       <div class="right">
+
 
         <div class="box__account">
 
+
           <div class="image">
 
-            <!-- ⚠️ Image path corrected -->
             <img
-              src="./Images/hakker.jpg"
-              alt="">
+              src="./images/hakker.jpg"
+              alt=""
+            >
 
           </div>
 
@@ -475,7 +529,8 @@
             <img
               width="100px"
               src="./images/balloon1.png"
-              alt="">
+              alt=""
+            >
 
           </div>
 
@@ -485,14 +540,18 @@
             <img
               width="100px"
               src="./images/balloon2.png"
-              alt="">
+              alt=""
+            >
 
           </div>
+
 
         </div>
 
 
+
         <div class="cricle">
+
 
           <div class="text__cricle">
 
@@ -514,14 +573,21 @@
 
           </div>
 
+
           <i class="fa-solid fa-heart"></i>
+
 
         </div>
 
+
       </div>
+
 
     </div>
 
+
+
+    <!-- ⭐ Decorations -->
 
     <div
       class="decorate_star star1"
@@ -549,6 +615,7 @@
     </div>
 
 
+
     <div
       class="decorate_flower--one"
       style="--t: 15s;">
@@ -556,7 +623,8 @@
       <img
         width="20"
         src="./images/decorate_flower.png"
-        alt="">
+        alt=""
+      >
 
     </div>
 
@@ -568,7 +636,8 @@
       <img
         width="20"
         src="./images/decorate_flower.png"
-        alt="">
+        alt=""
+      >
 
     </div>
 
@@ -580,9 +649,11 @@
       <img
         width="20"
         src="./images/decorate_flower.png"
-        alt="">
+        alt=""
+      >
 
     </div>
+
 
 
     <div class="decorate_bottom">
@@ -590,7 +661,8 @@
       <img
         src="./images/decorate.png"
         alt=""
-        width="100">
+        width="100"
+      >
 
     </div>
 
@@ -600,30 +672,39 @@
       <img
         src="./images/smiley_icon.png"
         alt=""
-        width="100">
+        width="100"
+      >
 
     </div>
 
 
-    <!-- 💌 Letter Box -->
+
+    <!-- 💌 LETTER BOX -->
 
     <div class="box__letter">
 
+
       <div class="letter__border">
 
+
         <div class="letter">
+
 
           <div class="title__letter"></div>
 
 
+
           <div class="content__letter">
 
+
             <div class="left">
+
 
               <img
                 id="heart__letter"
                 src="https://media0.giphy.com/media/c76IJLufpNwSULPk77/giphy.gif"
-                alt="">
+                alt=""
+              >
 
 
               <img
@@ -631,7 +712,8 @@
                 style="--t: 0.2s"
                 width="20"
                 src="./images/heart.png"
-                alt="">
+                alt=""
+              >
 
 
               <img
@@ -639,7 +721,8 @@
                 style="--t: 0.4s"
                 width="20"
                 src="./images/heart.png"
-                alt="">
+                alt=""
+              >
 
 
               <img
@@ -647,7 +730,8 @@
                 style="--t: 0.6s"
                 width="20"
                 src="./images/heart.png"
-                alt="">
+                alt=""
+              >
 
 
               <img
@@ -655,21 +739,27 @@
                 style="--t: 0.8s"
                 width="20"
                 src="./images/heart.png"
-                alt="">
+                alt=""
+              >
+
 
             </div>
 
 
+
             <div class="right">
+
 
               <div class="love__img">
 
                 <img
                   src="https://media4.giphy.com/media/W4jyjmIpnw6e38B6Qc/giphy.gif"
                   alt=""
-                  width="220">
+                  width="220"
+                >
 
               </div>
+
 
 
               <div class="text__letter">
@@ -679,17 +769,23 @@
               </div>
 
 
+
               <img
                 id="mewmew"
                 width="80"
                 src="./images/mewmew.gif"
-                alt="">
+                alt=""
+              >
+
 
             </div>
 
+
           </div>
 
+
         </div>
+
 
 
         <div class="close">
@@ -698,22 +794,34 @@
 
         </div>
 
+
       </div>
 
+
     </div>
+
 
   </div>
 
 
 
-  <!-- Main Script -->
+  <!-- ========================================================= -->
+  <!-- JAVASCRIPT -->
+  <!-- ========================================================= -->
 
   <script>
 
+
+    /* 📅 DATE */
+
     let datetxt = "27 Aug";
 
+
+    /* ❤️ BIRTHDAY MESSAGE */
+
     let datatxtletter =
-      "പെൺകുട്ടികളുടെ രോമാഞ്ചകഞ്ചുകവം ആലപ്പുഴയുടെ പൊന്നമനപുത്രനും kadayadizz കുടുംബത്തിൻ്റെ കണ്ണിലുണ്ണിയുമായ നമ്മുടെ hakker കുട്ടന് നമ്മുടെ കുടുംബത്തിൻ്റെ പേരിലുള്ള ജന്മദിനാശംസകൾ നേരുന്നു ❤️";
+      "പെൺകുട്ടികളുടെ രോമാഞ്ചകഞ്ചുകവും ആലപ്പുഴയുടെ പൊന്നോമന പുത്രനും Kadayadizz കുടുംബത്തിന്റെ കണ്ണിലുണ്ണിയുമായ നമ്മുടെ Hakker കുട്ടന് നമ്മുടെ കുടുംബത്തിന്റെ പേരിലുള്ള ജന്മദിനാശംസകൾ നേരുന്നു ❤️";
+
 
     let titleLetter = "To you";
 
@@ -721,8 +829,10 @@
     let charArrDate =
       datetxt.split('');
 
+
     let charArrDateLetter =
       datatxtletter.split('');
+
 
     let charArrTitle =
       titleLetter.split('');
@@ -740,13 +850,14 @@
         ".date__of__birth span"
       );
 
+
     let text__letter =
       document.querySelector(
         ".text__letter p"
       );
 
 
-    /* 🎵 Birthday Song */
+    /* 🎵 AUDIO */
 
     const birthdaySong =
       document.getElementById(
@@ -755,29 +866,36 @@
 
 
 
-    /* 📅 Date Animation */
+    /* ========================================================= */
+    /* 📅 DATE ANIMATION */
+    /* ========================================================= */
 
-    setTimeout(function(){
+    setTimeout(function() {
 
-      timeDatetxt =
-        setInterval(function(){
 
-          if(
+      let timeDatetxt =
+        setInterval(function() {
+
+
+          if (
             currentIndex <
             charArrDate.length
-          ){
+          ) {
+
 
             date__of__birth.textContent +=
               charArrDate[currentIndex];
 
+
             currentIndex++;
 
-          }
 
-          else{
+          } else {
+
 
             let i =
               document.createElement("i");
+
 
             i.className =
               "fa-solid fa-star";
@@ -803,15 +921,20 @@
               timeDatetxt
             );
 
+
           }
 
-        },100);
 
-    },12000);
-
+        }, 100);
 
 
-    /* 💌 Click Here Button */
+    }, 12000);
+
+
+
+    /* ========================================================= */
+    /* 💌 OPEN LETTER + PLAY SONG */
+    /* ========================================================= */
 
     var intervalContent;
 
@@ -820,14 +943,16 @@
 
     $("#btn__letter").on(
       "click",
-      function(){
+      function() {
 
-        /* 🎵 PLAY KANNAPPI */
+
+        /* 🎵 Start song */
 
         birthdaySong.currentTime = 0;
 
+
         birthdaySong.play().catch(
-          function(error){
+          function(error) {
 
             console.log(
               "Audio playback failed:",
@@ -838,31 +963,34 @@
         );
 
 
-        /* 💌 Open Letter */
+        /* 💌 Open letter */
 
         $(".box__letter").slideDown();
 
 
-        setTimeout(function(){
+        setTimeout(function() {
 
           $(".letter__border")
             .slideDown();
 
-        },1000);
+        }, 1000);
 
 
 
-        /* ❤️ Title Animation */
+        /* ❤️ Title animation */
 
-        setTimeout(function(){
+        setTimeout(function() {
+
 
           intervalTitle =
-            setInterval(function(){
+            setInterval(function() {
 
-              if(
+
+              if (
                 currentIndexTitle <
                 charArrTitle.length
-              ){
+              ) {
+
 
                 document
                   .querySelector(
@@ -879,6 +1007,7 @@
                     "i"
                   );
 
+
                 i.className =
                   "fa-solid fa-heart";
 
@@ -892,25 +1021,29 @@
 
                 currentIndexTitle++;
 
-              }
 
-              else{
+              } else {
+
 
                 clearInterval(
                   intervalTitle
                 );
 
+
               }
 
-            },100);
 
-        },2000);
-
+            }, 100);
 
 
-        /* 💖 GIF Animations */
+        }, 2000);
 
-        setTimeout(function(){
+
+
+        /* 💖 GIF animation */
+
+        setTimeout(function() {
+
 
           document
             .querySelector(
@@ -935,20 +1068,22 @@
             .classList
             .add("animationOp");
 
-        },2800);
+
+        }, 2800);
 
 
 
-        /* ❤️ Floating Hearts */
+        /* ❤️ Floating hearts */
 
-        setTimeout(function(){
+        setTimeout(function() {
+
 
           document
             .querySelectorAll(
               ".heart"
             )
             .forEach(
-              (item)=>{
+              (item) => {
 
                 item
                   .classList
@@ -957,73 +1092,86 @@
               }
             );
 
-        },3500);
+
+        }, 3500);
 
 
 
-        /* 📝 Letter Text */
+        /* 📝 Letter text */
 
-        setTimeout(function(){
+        setTimeout(function() {
+
 
           intervalContent =
-            setInterval(function(){
+            setInterval(function() {
 
-              if(
+
+              if (
                 currentIndexLetter <
                 charArrDateLetter.length
-              ){
+              ) {
+
 
                 text__letter.textContent +=
                   charArrDateLetter[
                     currentIndexLetter
                   ];
 
+
                 currentIndexLetter++;
 
-              }
 
-              else{
+              } else {
+
 
                 clearInterval(
                   intervalContent
                 );
 
+
               }
 
-            },50);
 
-        },6000);
+            }, 50);
+
+
+        }, 6000);
+
 
       }
     );
 
 
 
-    /* ❌ Close Letter */
+    /* ========================================================= */
+    /* ❌ CLOSE LETTER + STOP SONG */
+    /* ========================================================= */
 
     $(".close").on(
       "click",
-      function(){
+      function() {
 
-        /* 🎵 STOP SONG */
+
+        /* 🎵 Stop and reset song */
 
         birthdaySong.pause();
 
         birthdaySong.currentTime = 0;
 
 
-        /* Stop Text Animation */
+        /* Stop animations */
 
         clearInterval(
           intervalContent
         );
+
 
         clearInterval(
           intervalTitle
         );
 
 
-        /* Reset Letter */
+        /* Reset title */
 
         document
           .querySelector(
@@ -1031,6 +1179,8 @@
           )
           .textContent = "";
 
+
+        /* Reset message */
 
         text__letter.textContent = "";
 
@@ -1040,7 +1190,8 @@
         currentIndexTitle = 0;
 
 
-        /* Reset Animations */
+
+        /* Reset GIF animations */
 
         document
           .querySelector(
@@ -1066,12 +1217,15 @@
           .remove("animationOp");
 
 
+
+        /* Reset floating hearts */
+
         document
           .querySelectorAll(
             ".heart"
           )
           .forEach(
-            (item)=>{
+            (item) => {
 
               item
                 .classList
@@ -1081,7 +1235,8 @@
           );
 
 
-        /* Close Letter */
+
+        /* Close letter */
 
         $(".box__letter")
           .slideUp();
@@ -1090,10 +1245,14 @@
         $(".letter__border")
           .slideUp();
 
+
       }
     );
 
+
   </script>
 
+
 </body>
-  </html>
+
+</html>
